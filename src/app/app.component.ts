@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `
   <app-header></app-header>
   <router-outlet></router-outlet>
+  <h1 class="text-red-500">text</h1>
   `,
   styles: []
 })
