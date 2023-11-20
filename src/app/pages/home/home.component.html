@@ -1,4 +1,4 @@
-<mat-drawer-container [autosize]="true" class="min-h-full max-w-7x1 mx-auto border-x">
+<mat-drawer-container [autosize]="true" class="min-h-full max-w-7xl mx-auto border-x">
     <!-- left side nav filter  -->
     <mat-drawer mode="side" class="'p-6" opened>
         <app-filters (showCategory)="onShowCategory($event)"></app-filters>
@@ -15,23 +15,12 @@
         >
         <!-- card -->
             <mat-grid-tile>
-                <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
+                
+                <app-product-box 
+                    (addToCart)="onAddToCart($event)"
+                     class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
             </mat-grid-tile>
-            <mat-grid-tile>
-                <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
-            </mat-grid-tile>
+            
 
         </mat-grid-list>
     </mat-drawer-content>
